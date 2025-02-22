@@ -73,7 +73,7 @@ export default function Home() {
                 <TwitterIcon />
               </div>
               <span className="block font-medium text-lg transition-colors duration-500 group-hover:text-primary-400">Twitter</span>
-              <span className="text-secondary-400 transition-colors duration-500 group-hover:text-primary-300">@yourusername</span>
+              <span className="text-secondary-400 transition-colors duration-500 group-hover:text-primary-300">@JustMateNp</span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400/10 to-primary-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
             <a href="https://discord.com/users/yourdiscordid" 
@@ -83,7 +83,7 @@ export default function Home() {
                 <DiscordIcon />
               </div>
               <span className="block font-medium text-lg transition-colors duration-500 group-hover:text-primary-400">Discord</span>
-              <span className="text-secondary-400 transition-colors duration-500 group-hover:text-primary-300">scarface.nopraura</span>
+              <span className="text-secondary-400 transition-colors duration-500 group-hover:text-primary-300">JustMateNp</span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400/10 to-primary-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
           </div>
