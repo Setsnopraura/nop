@@ -7,7 +7,7 @@ export default function CheatDetails() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Image Section */}
         <div className="cheat-image">
-          <img src="/cheat.png" alt="FiveM Cheat" className="w-full h-auto rounded-xl shadow-2xl" />
+          <img src="/nop/cheat.png" alt="FiveM Cheat" className="w-full h-auto rounded-xl shadow-2xl" />
         </div>
 
         {/* Features Section */}
