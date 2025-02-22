@@ -7,11 +7,7 @@ export default function MemorialDetails() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Image Section */}
         <div className="cheat-image">
-          <img 
-            src="/nop/memorial.png" 
-            alt="Memorial Application" 
-            className="w-full h-auto rounded-xl"
-          />
+        <img src="/nop/memorial.png" alt="Memorial Application" className="w-full h-auto rounded-xl shadow-2xl" />
         </div>
 
         {/* Features Section */}
