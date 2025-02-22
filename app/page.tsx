@@ -43,6 +43,19 @@ const DiscordIcon = () => (
   </svg>
 );
 
+const skills = [
+  { skill: 'JavaScript', category: 'Frontend', icon: '/nop/icons/javascript.svg' },
+  { skill: 'TypeScript', category: 'Frontend', icon: '/nop/icons/typescript.svg' },
+  { skill: 'React', category: 'Frontend', icon: '/nop/icons/react.svg' },
+  { skill: 'Next.js', category: 'Fullstack', icon: '/nop/icons/nextjs.svg' },
+  { skill: 'Node.js', category: 'Backend', icon: '/nop/icons/nodejs.svg' },
+  { skill: 'TailwindCSS', category: 'Styling', icon: '/nop/icons/tailwindcss.svg' },
+  { skill: 'C#', category: 'Backend', icon: '/nop/icons/csharp.svg' },
+  { skill: 'C++', category: 'Systems', icon: '/nop/icons/cplusplus.svg' },
+  { skill: 'Python', category: 'Scripting', icon: '/nop/icons/python.svg' },
+  { skill: 'Kotlin', category: 'Mobile', icon: '/nop/icons/kotlin.svg' }
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen p-4 intro-animation">
@@ -100,18 +113,7 @@ export default function Home() {
               Skills & Technologies
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {[
-                { skill: 'JavaScript', category: 'Frontend', icon: '/nop/icons/javascript.svg' },
-                { skill: 'TypeScript', category: 'Frontend', icon: '/nop/icons/typescript.svg' },
-                { skill: 'React', category: 'Frontend', icon: '/icons/react.svg' },
-                { skill: 'Next.js', category: 'Fullstack', icon: '/icons/nextjs.svg' },
-                { skill: 'Node.js', category: 'Backend', icon: '/icons/nodejs.svg' },
-                { skill: 'TailwindCSS', category: 'Styling', icon: '/icons/tailwindcss.svg' },
-                { skill: 'C#', category: 'Backend', icon: '/icons/csharp.svg' },
-                { skill: 'C++', category: 'Systems', icon: '/icons/cplusplus.svg' },
-                { skill: 'Python', category: 'Scripting', icon: '/icons/python.svg' },
-                { skill: 'Kotlin', category: 'Mobile', icon: '/icons/kotlin.svg' }
-              ].map(({ skill, category, icon }) => (
+              {skills.map(({ skill, category, icon }) => (
                 <div key={skill} 
                      className="skill-card p-4 bg-secondary-800/50 backdrop-blur-sm rounded-xl hover:bg-secondary-700/70 transition-all group border border-secondary-700 hover:border-primary-400 lucid-hover">
                   <div className="flex items-center gap-3 mb-2">
@@ -144,14 +146,14 @@ export default function Home() {
                 <ProjectCard 
                   title="FiveM Cheat" 
                   description="A custom cheat tool developed for the FiveM platform, enhancing gameplay with unique features."
-                  image="/cheat.png"
+                  image="/nop/cheat.png"
                 />
               </Link>
               <Link href="/memorial">
                 <ProjectCard 
                   title="Memorial Application" 
                   description="An application designed to create and manage memorials, offering a space for remembrance."
-                  image="/memorial.png"
+                  image="/nop/memorial.png"
                 />
               </Link>
             </div>
