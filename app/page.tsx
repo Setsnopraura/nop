@@ -101,8 +101,8 @@ export default function Home() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {[
-                { skill: 'JavaScript', category: 'Frontend', icon: '/icons/javascript.svg' },
-                { skill: 'TypeScript', category: 'Frontend', icon: '/icons/typescript.svg' },
+                { skill: 'JavaScript', category: 'Frontend', icon: '/nop/icons/javascript.svg' },
+                { skill: 'TypeScript', category: 'Frontend', icon: '/nop/icons/typescript.svg' },
                 { skill: 'React', category: 'Frontend', icon: '/icons/react.svg' },
                 { skill: 'Next.js', category: 'Fullstack', icon: '/icons/nextjs.svg' },
                 { skill: 'Node.js', category: 'Backend', icon: '/icons/nodejs.svg' },
