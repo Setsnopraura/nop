@@ -7,4 +7,5 @@ const nextConfig = {
     basePath: process.env.NODE_ENV === 'production' ? '/-P-' : '',
   }
   
-  module.exports = nextConfig
+
+module.exports = nextConfig;
