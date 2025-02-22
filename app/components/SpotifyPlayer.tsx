@@ -9,9 +9,8 @@ export default function SpotifyPlayer() {
         height="80" 
         frameBorder="0" 
         allow="encrypted-media"
-        className="rounded-lg relative z-10"
+        className="rounded-lg"
       />
-      <div className="absolute inset-0 bg-primary-500/10 rounded-lg z-20 pointer-events-none" />
     </div>
   );
 } 

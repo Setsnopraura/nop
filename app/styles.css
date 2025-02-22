@@ -366,3 +366,12 @@ html {
 .cheat-image:hover::before, .memorial-image:hover::before {
   opacity: 1;
 }
+
+audio {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+}

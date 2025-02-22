@@ -13,36 +13,34 @@
   }
 }
 
-/* Image Hover Effect */
 .memorial-image {
-  position: relative;
-  overflow: hidden;
-  border-radius: 1rem;
-  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.memorial-image::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.memorial-image:hover {
-  transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.02);
-  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
-}
-
-.memorial-image:hover::before {
-  opacity: 1;
-}
-
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  .memorial-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .memorial-image:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.02);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+  }
+  
+  .memorial-image:hover::before {
+    opacity: 1;
+  }
 /* Text Glow Animation */
 .memorial-title {
   background: linear-gradient(45deg, #8b5cf6, #ec4899);
