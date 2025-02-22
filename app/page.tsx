@@ -136,7 +136,6 @@ export default function Home() {
         </ScrollReveal>
 
         {/* Projects Section */}
-        <ScrollReveal>
           <section className="section-animation">
             <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent animate-text-glow">
               Featured Projects
@@ -158,7 +157,6 @@ export default function Home() {
               </Link>
             </div>
           </section>
-        </ScrollReveal>
 
         {/* About Section */}
         <ScrollReveal>
