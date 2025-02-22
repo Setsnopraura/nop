@@ -6,13 +6,12 @@ export default function MemorialDetails() {
     <div className="min-h-screen p-8 cheat-bg text-secondary-100">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Image Section */}
-        <div className="cheat-image relative overflow-hidden rounded-xl shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-lg">
+        <div className="cheat-image">
           <img 
             src="/nop/memorial.png" 
             alt="Memorial Application" 
-            className="w-full h-auto rounded-xl transform transition-all duration-500 hover:scale-110"
+            className="w-full h-auto rounded-xl"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-400/10 to-primary-600/10 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
         </div>
 
         {/* Features Section */}
