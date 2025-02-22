@@ -1,6 +1,7 @@
 import './styles.css';
 import Link from 'next/link';
 import SpotifyPlayer from './components/SpotifyPlayer';
+import ScrollReveal from './components/ScrollReveal';
 // Add this GitHubIcon component
 const GitHubIcon = () => (
   <svg
@@ -93,79 +94,83 @@ export default function Home() {
         <SpotifyPlayer />
 
         {/* Skills Section */}
-        <section className="section-animation">
-          <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent animate-text-glow">
-            Skills & Technologies
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[
-              { skill: 'JavaScript', category: 'Frontend', icon: '/icons/javascript.svg' },
-              { skill: 'TypeScript', category: 'Frontend', icon: '/icons/typescript.svg' },
-              { skill: 'React', category: 'Frontend', icon: '/icons/react.svg' },
-              { skill: 'Next.js', category: 'Fullstack', icon: '/icons/nextjs.svg' },
-              { skill: 'Node.js', category: 'Backend', icon: '/icons/nodejs.svg' },
-              { skill: 'TailwindCSS', category: 'Styling', icon: '/icons/tailwindcss.svg' },
-              { skill: 'C#', category: 'Backend', icon: '/icons/csharp.svg' },
-              { skill: 'C++', category: 'Systems', icon: '/icons/cplusplus.svg' },
-              { skill: 'Python', category: 'Scripting', icon: '/icons/python.svg' },
-              { skill: 'Kotlin', category: 'Mobile', icon: '/icons/kotlin.svg' }
-            ].map(({ skill, category, icon }) => (
-              <div key={skill} 
-                   className="skill-card p-4 bg-secondary-800/50 backdrop-blur-sm rounded-xl hover:bg-secondary-700/70 transition-all group border border-secondary-700 hover:border-primary-400 lucid-hover">
-                <div className="flex items-center gap-3 mb-2">
-                  <img 
-                    src={icon} 
-                    alt={skill} 
-                    className="w-8 h-8 transition-all duration-300 group-hover:scale-110" 
-                  />
-                  <h3 className="text-lg font-medium text-secondary-400 group-hover:text-primary-400 transition-colors duration-500">
-                    {skill}
-                  </h3>
+        <ScrollReveal>
+          <section className="section-animation">
+            <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent animate-text-glow">
+              Skills & Technologies
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {[
+                { skill: 'JavaScript', category: 'Frontend', icon: '/icons/javascript.svg' },
+                { skill: 'TypeScript', category: 'Frontend', icon: '/icons/typescript.svg' },
+                { skill: 'React', category: 'Frontend', icon: '/icons/react.svg' },
+                { skill: 'Next.js', category: 'Fullstack', icon: '/icons/nextjs.svg' },
+                { skill: 'Node.js', category: 'Backend', icon: '/icons/nodejs.svg' },
+                { skill: 'TailwindCSS', category: 'Styling', icon: '/icons/tailwindcss.svg' },
+                { skill: 'C#', category: 'Backend', icon: '/icons/csharp.svg' },
+                { skill: 'C++', category: 'Systems', icon: '/icons/cplusplus.svg' },
+                { skill: 'Python', category: 'Scripting', icon: '/icons/python.svg' },
+                { skill: 'Kotlin', category: 'Mobile', icon: '/icons/kotlin.svg' }
+              ].map(({ skill, category, icon }) => (
+                <div key={skill} 
+                     className="skill-card p-4 bg-secondary-800/50 backdrop-blur-sm rounded-xl hover:bg-secondary-700/70 transition-all group border border-secondary-700 hover:border-primary-400 lucid-hover">
+                  <div className="flex items-center gap-3 mb-2">
+                    <img 
+                      src={icon} 
+                      alt={skill} 
+                      className="w-8 h-8 transition-all duration-300 group-hover:scale-110" 
+                    />
+                    <h3 className="text-lg font-medium text-secondary-400 group-hover:text-primary-400 transition-colors duration-500">
+                      {skill}
+                    </h3>
+                  </div>
+                  <span className="text-sm text-secondary-500 group-hover:text-primary-300 transition-colors duration-500">
+                    {category}
+                  </span>
                 </div>
-                <span className="text-sm text-secondary-500 group-hover:text-primary-300 transition-colors duration-500">
-                  {category}
-                </span>
-              </div>
-            ))}
-          </div>
-        </section>
+              ))}
+            </div>
+          </section>
+        </ScrollReveal>
 
-
-{/* Projects Section */}
-<section className="section-animation">
-  <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent animate-text-glow">
-    Featured Projects
-  </h2>
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <Link href="/cheat">
-      <ProjectCard 
-        title="FiveM Cheat" 
-        description="A custom cheat tool developed for the FiveM platform, enhancing gameplay with unique features."
-        image="/cheat.png"
-      />
-    </Link>
-    <Link href="/memorial">
-      <ProjectCard 
-        title="Memorial Application" 
-        description="An application designed to create and manage memorials, offering a space for remembrance."
-        image="/memorial.png"
-      />
-    </Link>
-  </div>
-</section>
-
+        {/* Projects Section */}
+        <ScrollReveal>
+          <section className="section-animation">
+            <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent animate-text-glow">
+              Featured Projects
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Link href="/cheat">
+                <ProjectCard 
+                  title="FiveM Cheat" 
+                  description="A custom cheat tool developed for the FiveM platform, enhancing gameplay with unique features."
+                  image="/cheat.png"
+                />
+              </Link>
+              <Link href="/memorial">
+                <ProjectCard 
+                  title="Memorial Application" 
+                  description="An application designed to create and manage memorials, offering a space for remembrance."
+                  image="/memorial.png"
+                />
+              </Link>
+            </div>
+          </section>
+        </ScrollReveal>
 
         {/* About Section */}
-        <section className="section-animation max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent animate-text-glow">
-            About Me
-          </h2>
-          <p className="text-secondary-400 text-lg leading-relaxed">
-            A passionate developer focused on creating impactful web experiences. 
-            Always learning and building something new. Specializing in modern 
-            web technologies and clean, efficient code.
-          </p>
-        </section>
+        <ScrollReveal>
+          <section className="section-animation max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent animate-text-glow">
+              About Me
+            </h2>
+            <p className="text-secondary-400 text-lg leading-relaxed">
+              A passionate developer focused on creating impactful web experiences. 
+              Always learning and building something new. Specializing in modern 
+              web technologies and clean, efficient code.
+            </p>
+          </section>
+        </ScrollReveal>
       </div>
     </main>
   );
