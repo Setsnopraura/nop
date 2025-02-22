@@ -1,5 +1,6 @@
 import './styles.css';
-
+import Link from 'next/link';
+import SpotifyPlayer from './components/SpotifyPlayer';
 // Add this GitHubIcon component
 const GitHubIcon = () => (
   <svg
@@ -55,75 +56,104 @@ export default function Home() {
           </div>
           
           {/* Social Links */}
-          <div className="flex justify-center space-x-6 max-w-2xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto">
             <a href="https://github.com/setsnopraura" 
-               className="group bg-secondary-800/50 backdrop-blur-sm p-6 rounded-xl hover:bg-secondary-700/70 transition-all flex flex-col items-center relative overflow-hidden animate-float hover:shadow-lg hover:shadow-primary-500/10 border border-secondary-700 hover:border-primary-400 lucid-hover"
-               style={{ animationDelay: '0s' }}>
-              <div className="w-10 h-10 mb-3 text-secondary-400 group-hover:text-primary-400 transition-colors duration-500">
+               className="group bg-secondary-800/50 backdrop-blur-sm p-4 rounded-xl hover:bg-secondary-700/70 transition-all flex flex-col items-center relative overflow-hidden animate-float hover:shadow-lg hover:shadow-primary-500/10 border border-secondary-700 hover:border-primary-400 lucid-hover"
+               style={{ animationDelay: '0s', width: '180px' }}>
+              <div className="w-8 h-8 mb-2 text-secondary-400 group-hover:text-primary-400 transition-colors duration-500 flex items-center justify-center">
                 <GitHubIcon />
               </div>
-              <span className="block font-medium text-lg transition-colors duration-500 group-hover:text-primary-400">GitHub</span>
-              <span className="text-secondary-400 transition-colors duration-500 group-hover:text-primary-300">@setsnopraura</span>
+              <span className="block font-medium text-base transition-colors duration-500 group-hover:text-primary-400 text-center">GitHub</span>
+              <span className="text-secondary-400 transition-colors duration-500 group-hover:text-primary-300 text-sm text-center">@setsnopraura</span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400/10 to-primary-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
             <a href="https://twitter.com/JustMateNp" 
-               className="group bg-secondary-800/50 backdrop-blur-sm p-6 rounded-xl hover:bg-secondary-700/70 transition-all flex flex-col items-center relative overflow-hidden animate-float hover:shadow-lg hover:shadow-primary-500/10 border border-secondary-700 hover:border-primary-400 lucid-hover"
-               style={{ animationDelay: '0.2s' }}>
-              <div className="w-10 h-10 mb-3 text-secondary-400 group-hover:text-primary-400 transition-colors duration-500">
+               className="group bg-secondary-800/50 backdrop-blur-sm p-4 rounded-xl hover:bg-secondary-700/70 transition-all flex flex-col items-center relative overflow-hidden animate-float hover:shadow-lg hover:shadow-primary-500/10 border border-secondary-700 hover:border-primary-400 lucid-hover"
+               style={{ animationDelay: '0.2s', width: '180px' }}>
+              <div className="w-8 h-8 mb-2 text-secondary-400 group-hover:text-primary-400 transition-colors duration-500 flex items-center justify-center">
                 <TwitterIcon />
               </div>
-              <span className="block font-medium text-lg transition-colors duration-500 group-hover:text-primary-400">Twitter</span>
-              <span className="text-secondary-400 transition-colors duration-500 group-hover:text-primary-300">@JustMateNp</span>
+              <span className="block font-medium text-base transition-colors duration-500 group-hover:text-primary-400 text-center">Twitter</span>
+              <span className="text-secondary-400 transition-colors duration-500 group-hover:text-primary-300 text-sm text-center">@JustMateNp</span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400/10 to-primary-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
             <a href="https://discord.com/users/JustMateNp" 
-               className="group bg-secondary-800/50 backdrop-blur-sm p-6 rounded-xl hover:bg-secondary-700/70 transition-all flex flex-col items-center relative overflow-hidden animate-float hover:shadow-lg hover:shadow-primary-500/10 border border-secondary-700 hover:border-primary-400 lucid-hover"
-               style={{ animationDelay: '0.4s' }}>
-              <div className="w-10 h-10 mb-3 text-secondary-400 group-hover:text-primary-400 transition-colors duration-500">
+               className="group bg-secondary-800/50 backdrop-blur-sm p-4 rounded-xl hover:bg-secondary-700/70 transition-all flex flex-col items-center relative overflow-hidden animate-float hover:shadow-lg hover:shadow-primary-500/10 border border-secondary-700 hover:border-primary-400 lucid-hover"
+               style={{ animationDelay: '0.4s', width: '180px' }}>
+              <div className="w-8 h-8 mb-2 text-secondary-400 group-hover:text-primary-400 transition-colors duration-500 flex items-center justify-center">
                 <DiscordIcon />
               </div>
-              <span className="block font-medium text-lg transition-colors duration-500 group-hover:text-primary-400">Discord</span>
-              <span className="text-secondary-400 transition-colors duration-500 group-hover:text-primary-300">JustMateNp</span>
+              <span className="block font-medium text-base transition-colors duration-500 group-hover:text-primary-400 text-center">Discord</span>
+              <span className="text-secondary-400 transition-colors duration-500 group-hover:text-primary-300 text-sm text-center">JustMateNp</span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400/10 to-primary-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
           </div>
         </section>
+
+        <SpotifyPlayer />
 
         {/* Skills Section */}
         <section className="section-animation">
           <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent animate-text-glow">
             Skills & Technologies
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {['JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 
-              'TailwindCSS', 'C#', 'C++', 'Python', 'Java', 'Ruby', 
-              'Go', 'PHP', 'Swift', 'Kotlin'].map((skill) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              { skill: 'JavaScript', category: 'Frontend', icon: '/icons/javascript.svg' },
+              { skill: 'TypeScript', category: 'Frontend', icon: '/icons/typescript.svg' },
+              { skill: 'React', category: 'Frontend', icon: '/icons/react.svg' },
+              { skill: 'Next.js', category: 'Fullstack', icon: '/icons/nextjs.svg' },
+              { skill: 'Node.js', category: 'Backend', icon: '/icons/nodejs.svg' },
+              { skill: 'TailwindCSS', category: 'Styling', icon: '/icons/tailwindcss.svg' },
+              { skill: 'C#', category: 'Backend', icon: '/icons/csharp.svg' },
+              { skill: 'C++', category: 'Systems', icon: '/icons/cplusplus.svg' },
+              { skill: 'Python', category: 'Scripting', icon: '/icons/python.svg' },
+              { skill: 'Kotlin', category: 'Mobile', icon: '/icons/kotlin.svg' }
+            ].map(({ skill, category, icon }) => (
               <div key={skill} 
-                   className="p-4 bg-secondary-800/50 backdrop-blur-sm rounded-lg text-center hover:bg-secondary-700/70 transition-all group hover:scale-105 hover:shadow-lg hover:shadow-primary-500/10 border border-secondary-700 hover:border-primary-400 lucid-hover">
-                <span className="text-secondary-400 group-hover:text-primary-400 transition-colors duration-500">
-                  {skill}
+                   className="skill-card p-4 bg-secondary-800/50 backdrop-blur-sm rounded-xl hover:bg-secondary-700/70 transition-all group border border-secondary-700 hover:border-primary-400 lucid-hover">
+                <div className="flex items-center gap-3 mb-2">
+                  <img 
+                    src={icon} 
+                    alt={skill} 
+                    className="w-8 h-8 transition-all duration-300 group-hover:scale-110" 
+                  />
+                  <h3 className="text-lg font-medium text-secondary-400 group-hover:text-primary-400 transition-colors duration-500">
+                    {skill}
+                  </h3>
+                </div>
+                <span className="text-sm text-secondary-500 group-hover:text-primary-300 transition-colors duration-500">
+                  {category}
                 </span>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Projects Section */}
-        <section className="section-animation">
-          <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent animate-text-glow">
-            Featured Projects
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <ProjectCard 
-              title="Project Name" 
-              description="Brief description of your awesome project" 
-            />
-            <ProjectCard 
-              title="Another Project" 
-              description="Another cool project you've worked on" 
-            />
-          </div>
-        </section>
+
+{/* Projects Section */}
+<section className="section-animation">
+  <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent animate-text-glow">
+    Featured Projects
+  </h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <Link href="/cheat">
+      <ProjectCard 
+        title="FiveM Cheat" 
+        description="A custom cheat tool developed for the FiveM platform, enhancing gameplay with unique features."
+        image="/cheat.png"
+      />
+    </Link>
+    <Link href="/memorial">
+      <ProjectCard 
+        title="Memorial Application" 
+        description="An application designed to create and manage memorials, offering a space for remembrance."
+        image="/memorial.png"
+      />
+    </Link>
+  </div>
+</section>
+
 
         {/* About Section */}
         <section className="section-animation max-w-2xl mx-auto text-center">
@@ -141,9 +171,12 @@ export default function Home() {
   );
 }
 
-function ProjectCard({ title, description }: { title: string, description: string }) {
+function ProjectCard({ title, description, image }: { title: string, description: string, image: string }) {
   return (
     <div className="bg-secondary-800/50 backdrop-blur-sm p-6 rounded-xl hover:bg-secondary-700/70 transition-all hover:scale-[1.02] hover:shadow-lg hover:shadow-primary-500/10 border border-secondary-700 hover:border-primary-400 lucid-hover">
+      <div className="cheat-image">
+        <img src={image} alt={title} className="w-full h-48 object-cover rounded-lg mb-4" />
+      </div>
       <h3 className="font-medium text-xl mb-2 transition-colors duration-500 hover:text-primary-400">{title}</h3>
       <p className="text-secondary-400 transition-colors duration-500 hover:text-primary-300">{description}</p>
     </div>
