@@ -55,8 +55,8 @@ export default function Home() {
           </div>
           
           {/* Social Links */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
-            <a href="https://github.com/yourusername" 
+          <div className="flex justify-center space-x-6 max-w-2xl mx-auto">
+            <a href="https://github.com/setsnopraura" 
                className="group bg-secondary-800/50 backdrop-blur-sm p-6 rounded-xl hover:bg-secondary-700/70 transition-all flex flex-col items-center relative overflow-hidden animate-float hover:shadow-lg hover:shadow-primary-500/10 border border-secondary-700 hover:border-primary-400 lucid-hover"
                style={{ animationDelay: '0s' }}>
               <div className="w-10 h-10 mb-3 text-secondary-400 group-hover:text-primary-400 transition-colors duration-500">
@@ -66,7 +66,7 @@ export default function Home() {
               <span className="text-secondary-400 transition-colors duration-500 group-hover:text-primary-300">@setsnopraura</span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400/10 to-primary-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
-            <a href="https://twitter.com/yourusername" 
+            <a href="https://twitter.com/JustMateNp" 
                className="group bg-secondary-800/50 backdrop-blur-sm p-6 rounded-xl hover:bg-secondary-700/70 transition-all flex flex-col items-center relative overflow-hidden animate-float hover:shadow-lg hover:shadow-primary-500/10 border border-secondary-700 hover:border-primary-400 lucid-hover"
                style={{ animationDelay: '0.2s' }}>
               <div className="w-10 h-10 mb-3 text-secondary-400 group-hover:text-primary-400 transition-colors duration-500">
@@ -76,7 +76,7 @@ export default function Home() {
               <span className="text-secondary-400 transition-colors duration-500 group-hover:text-primary-300">@JustMateNp</span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400/10 to-primary-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
-            <a href="https://discord.com/users/yourdiscordid" 
+            <a href="https://discord.com/users/JustMateNp" 
                className="group bg-secondary-800/50 backdrop-blur-sm p-6 rounded-xl hover:bg-secondary-700/70 transition-all flex flex-col items-center relative overflow-hidden animate-float hover:shadow-lg hover:shadow-primary-500/10 border border-secondary-700 hover:border-primary-400 lucid-hover"
                style={{ animationDelay: '0.4s' }}>
               <div className="w-10 h-10 mb-3 text-secondary-400 group-hover:text-primary-400 transition-colors duration-500">
